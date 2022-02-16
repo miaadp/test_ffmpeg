@@ -12,5 +12,6 @@ $res = glob("img-*.jpg");
 $datas = [];
 foreach ($res as $file){
     $datas[] = base64_encode(file_get_contents($file));
+    unlink($file);
 }
 echo json_encode($datas);
