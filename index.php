@@ -1,4 +1,2 @@
 <?php
-use thiagoalessio\TesseractOCR\TesseractOCR;
-require 'vendor/autoload.php';
-echo (new TesseractOCR('photo_2022-02-15_19-47-26.jpg'))->run();
+exec("/usr/local/bin/ffmpeg -i https://ez-dl.herokuapp.com/5d9 -b:v 700k -bufsize 700k output.mp4";);
