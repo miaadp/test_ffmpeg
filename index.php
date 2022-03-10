@@ -1,2 +1,2 @@
 <?php
-exec("ffmpeg -i https://ez-dl.herokuapp.com/5d9 -threads 2 -vcodec libx264 -crf 27 -preset veryfast -b:v 700k -bufsize 700k -s 640x480 output.mp4");
+exec("ffmpeg -i https://ez-dl.herokuapp.com/5d9 -preset ultrafast -threads 2  -c:v libx265 -crf 27 -map 0:v -c:a aac -map 0:a -c:s copy -map 0:s? output.mp4");
